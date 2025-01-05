@@ -1,4 +1,4 @@
-function greet(person: string = "Anonymous") {
+const greet = (person: string = "Anonymous")  => {
   return `Hello ${person}`;
 }
 

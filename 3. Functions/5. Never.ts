@@ -1,18 +1,18 @@
 // 1.
-function throwError(msg: string): never {
+const throwError = (msg: string): never => {
   throw new Error(msg);
 }
 
 // 2.
-function infiniteLoop(): never {
+const infiniteLoop = (): never =>  {
   while (true) {}
 }
 
 // 3.
 let x: never;
 
-function neverReturns(): never {
+const neverReturns = (): never => {
   while (true) {}
 }
 
-x = neverReturns(); // This line will cause a compile-time error because the function never returns
+x = neverReturns(); // Esta línea provocará un error en tiempo de compilación porque la función nunca retorna
