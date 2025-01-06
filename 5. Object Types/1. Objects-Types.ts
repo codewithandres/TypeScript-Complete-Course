@@ -1,20 +1,20 @@
 // type variableName (annotations/types) = {property:value}
 
 // -------------------------
-// Define a person object
+// Definir un objeto persona
 const person: { firstName: string; lastName: string; age: number } = {
   firstName: "John",
   lastName: "Doe",
   age: 30,
 };
 
-// Access and log properties
+// Propiedades de acceso y registro
 console.log(`Name: ${person.firstName} ${person.lastName}, Age: ${person.age}`);
 // -------------------------
 
 // -------------------------
-// Using objects as function return value
-function printUser(): { name: string; age: number; location: string } {
+// Uso de objetos como valor de retorno de una función
+const printUser = (): { name: string; age: number; location: string } => {
   return {
     name: "Alex",
     age: 19,
@@ -25,7 +25,7 @@ function printUser(): { name: string; age: number; location: string } {
 const res = printUser();
 console.log(res);
 
-function printUserName(person: { firstName: string; lastName: string }) {
+const printUserName = (person: { firstName: string; lastName: string }) => {
   console.log(`${person.firstName} ${person.lastName}`);
 }
 
