@@ -4,10 +4,10 @@ interface Identifiable {
 }
 
 // Generic function with a type constraint
-function mergeObjects<T extends Identifiable, U extends Record<string, any>>(
+const mergeObjects = <T extends Identifiable, U extends Record<string, any>>(
   obj1: T,
   obj2: U
-): T & U {
+): T & U  => {
   return { ...obj1, ...obj2 };
 }
 

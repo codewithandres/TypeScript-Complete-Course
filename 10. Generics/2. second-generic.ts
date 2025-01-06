@@ -1,4 +1,4 @@
-// Function Signature:
+//* Function Signature:
 
 // function getRandomKeyValuePair<T>(obj: { [key: string]: T }): { key: string; value: T } { ... }
 // The function is named getRandomKeyValuePair.
@@ -17,18 +17,19 @@
 // : { key: string; value: T }: The function returns an object with a fixed structure — a key property of type string and a value property of type T.
 
 // Generic function to get a random key-value pair from an object
-function getRandomKeyValuePair<T>(obj: { [key: string]: T }): {
-  key: string;
-  value: T;
-} {
+const getRandomKeyValuePair = <T>(obj: { [key: string]: T }): { key: string; value: T; } => {
+
   const keys = Object.keys(obj);
   const randKey = keys[Math.floor(Math.random() * keys.length)];
+
   return { key: randKey, value: obj[randKey] };
 }
 
 // Example usage with strings
 const stringObject = { a: "apple", b: "banana", c: "cherry" };
+
 const randomStringPair = getRandomKeyValuePair<string>(stringObject);
+
 console.log(randomStringPair); // Outputs: { key: 'a', value: 'apple' } (random)
 
 // Example usage with numbers
