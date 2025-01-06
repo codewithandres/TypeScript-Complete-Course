@@ -6,7 +6,7 @@ interface Person {
   sayHello(): void;
 }
 
-function greet(person: Person) {
+const greet = (person: Person) => {
   console.log(`Hello, ${person.firstName} ${person.lastName}!`);
   person.sayHello();
 }

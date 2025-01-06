@@ -25,7 +25,7 @@ interface Car {
 }
 
 // Function that accepts an object adhering to the Car interface
-function displayCarInfo(car: Car): void {
+const displayCarInfo = (car: Car): void  => {
   console.log(`Brand: ${car.brand}, Model: ${car.model}, Year: ${car.year}`);
 }
 
